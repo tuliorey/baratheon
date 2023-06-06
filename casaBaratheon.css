@@ -20,13 +20,13 @@ header {
     justify-content: center;
 }
 
-.GOTslogan {
+#GOTslogan {
     flex-grow: 1;
     text-align: center;
     color: white;
     background-color: black;
     font-family: 'UnifrakturCook', cursive;
-    font-size: 51px;
+    font-size: 50px;
 }
 
 #titulo {
