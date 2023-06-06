@@ -159,33 +159,42 @@
         <br>
         <div id="menu">
             <div>
-                <p id="textoMenu">Menu - Outras casas</p>
+                <p id="textoMenu" class="position-left">Menu - Outras casas</p>
             </div>
-            <div><a href="casaStark.html"><img src="imagens/logoStark.png" class="highlight"
-                        onmouseover="mudarTexto('Stark')" height="200px"></a></div>
-            <div><a href="casatargaryen.html"><img src="imagens/logoTargaryen.png" class="fade"
-                        onmouseover="mudarTexto('Targaryen')" height="200px"></a></div>
-            <div><a href="casaLannister.html"><img src="imagens/logoLannister.png" class="fade"
-                        onmouseover="mudarTexto('Lannister')" height="200px"></a></div>
-        </div>
-
+            <div class="position-center">
+                <a href="casaStark.html">
+                    <img src="imagens/logoStark.png" class="highlight" onmouseover="mudarTexto('Stark')" style="max-height: 160px;">
+                </a>
+            </div>
+            <div>
+                <a href="casatargaryen.html">
+                    <img src="imagens/logoTargaryen.png" class="custom-fade" onmouseover="mudarTexto('Targaryen')" style="max-height: 160px;">
+                </a>
+            </div>
+            <div>
+                <a href="casaLannister.html">
+                    <img src="imagens/logoLannister.png" class="custom-fade" onmouseover="mudarTexto('Lannister')" style="max-height: 160px;">
+                </a>
+            </div>
+        </div>        
+        
         <script>
             function mudarTexto(texto) {
                 document.getElementById("textoMenu").innerHTML = texto;
-
+        
                 var imagens = document.getElementsByTagName("img");
                 for (var i = 0; i < imagens.length; i++) {
                     if (imagens[i].classList.contains("highlight")) {
                         imagens[i].classList.remove("highlight");
-                        imagens[i].classList.add("fade");
+                        imagens[i].classList.add("custom-fade");
                     }
                     if (imagens[i].src === event.target.src) {
-                        imagens[i].classList.remove("fade");
+                        imagens[i].classList.remove("custom-fade");
                         imagens[i].classList.add("highlight");
                     }
                 }
             }
-        </script>
+        </script>       
     </nav>
 </body>
 
